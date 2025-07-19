@@ -37,12 +37,7 @@ print_header() {
     echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 }
 
-# Root kontrolü
-if [[ $EUID -eq 0 ]]; then
-   print_error "Bu script'i root olarak çalıştırmayın!"
-   print_info "Normal kullanıcı ile çalıştırın: ./server_install_complete.sh"
-   exit 1
-fi
+
 
 # İnternet bağlantı kontrolü
 print_info "İnternet bağlantısı kontrol ediliyor..."
